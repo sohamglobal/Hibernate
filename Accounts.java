@@ -23,13 +23,14 @@ public class Accounts
 	@Column (name="balance")
 	private double balance;
 
-	public int getAccno() {
-		return accno;
-	}
-
 	public Accounts()
 	{
 		
+	}
+
+	
+	public int getAccno() {
+		return accno;
 	}
 	
 	public void setAccno(int accno) {
