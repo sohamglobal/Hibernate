@@ -19,13 +19,18 @@ int no;
 String nm,ty;
 double bal;
 
+try
+{
 no=Integer.parseInt(request.getParameter("acnumber"));
 nm=request.getParameter("acname");
 ty=request.getParameter("actype");
 bal=Double.parseDouble(request.getParameter("balance"));
 
-SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Accounts.class).buildSessionFactory();
-Session ses=(Session) factory.getCurrentSession();
+Session ses;
+
+Configuration cfg=new Configuration().configure();		
+SessionFactory sf=cfg.addAnnotatedClass(Accounts.class).buildSessionFactory();
+ses=sf.getCurrentSession();
 
 ses.beginTransaction();
 
@@ -40,7 +45,11 @@ ses.getTransaction().commit();
 ses.close();
 
 out.println("Inserted..");
-
+}
+catch(Exception ex)
+	{
+		out.println("Error : "+ex);
+	}
 
 %>
 
