@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@page import="org.hibernate.cfg.Configuration" %>
-    <%@page import="org.hibernate.*" %>
-    <%@page import="myentities.*" %>
-    <%@page import="javax.persistence.*" %>
-    <%@page import="javax.persistence.criteria.*" %>
-    <%@page import="javax.persistence.Query" %>
-    <%@page import="java.util.*" %>
+<%@ page import="org.hibernate.*" %>
+<%@ page import="org.hibernate.cfg.*" %>
+<%@ page import="myentities.*" %>
+<%@ page import="java.util.List" %>
     
 <!DOCTYPE html>
 <html>
